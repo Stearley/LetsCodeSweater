@@ -1,0 +1,9 @@
+package com.ippsby.letscode.repository;
+
+import com.ippsby.letscode.domain.User;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface UserRepository extends JpaRepository<User, Long> {
+    User findByUsername(String username);
+
+}
